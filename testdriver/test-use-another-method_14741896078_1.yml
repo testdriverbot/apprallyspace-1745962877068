@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 68114bf661c61c7cb66f57ca
+steps:
+  - prompt: /run testdriver\login.yml
+    commands:
+      - command: run
+        file: testdriver\login.yml
+  - prompt: Click on "Use another method."
+    commands:
+      - command: hover-text
+        text: Use another method
+        description: link below the Continue button
+        action: click
+  - prompt: Select an alternative login method.
+    commands:
+      - command: hover-text
+        text: Continue with Google
+        description: button for Google login method
+        action: click
