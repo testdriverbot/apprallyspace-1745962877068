@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 68114bc9e03948ec2ab5012a
+steps:
+  - prompt: /run testdriver\login.yml
+    commands:
+      - command: run
+        file: testdriver\login.yml
+  - prompt: Click on "Help" link.
+    commands:
+      - command: hover-text
+        text: Help
+        description: help link at the bottom of the form
+        action: click
