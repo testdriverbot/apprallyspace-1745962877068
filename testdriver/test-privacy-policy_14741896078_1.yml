@@ -1,0 +1,17 @@
+version: 4.2.29
+session: 68114be3e03948ec2ab50133
+steps:
+  - prompt: /run testdriver\login.yml
+    commands:
+      - command: run
+        file: testdriver\login.yml
+  - prompt: Click on "Privacy" link.
+    commands:
+      - command: hover-text
+        text: Privacy
+        description: privacy link below the password form
+        action: click
+  - prompt: Assert that the privacy policy page loads correctly.
+    commands:
+      - command: assert
+        expect: the page shows a 404 error
