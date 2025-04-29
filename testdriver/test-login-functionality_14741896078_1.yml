@@ -1,0 +1,27 @@
+version: 4.2.29
+session: 68114bdd61c61c7cb66f57bb
+steps:
+  - prompt: /run testdriver\login.yml
+    commands:
+      - command: run
+        file: testdriver\login.yml
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Enter the username and password.
+    commands:
+      - command: hover-text
+        text: Your password
+        description: password input field
+        action: click
+      - command: type
+        text: your_password_here
+  - prompt: Click the "Continue" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the password field
+        action: click
+  - prompt: Assert that the login is successful and the dashboard page is loaded.
+    commands: []
