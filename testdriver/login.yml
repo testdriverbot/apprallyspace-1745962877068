@@ -1,0 +1,22 @@
+version: 4.2.29
+session: 6811492161c61c7cb66f575c
+steps:
+  - prompt: >-
+      login with username "f03cb69d-cc6c-4466-9f57-02be581df3ef@mailinator.com"
+      and password "f03cb69d-cc6c-4466-9f57-02be581df3ef"
+    commands:
+      - command: hover-text
+        text: Your email address
+        description: email input field
+        action: click
+      - command: type
+        text: f03cb69d-cc6c-4466-9f57-02be581df3ef@mailinator.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: f03cb69d-cc6c-4466-9f57-02be581df3ef
+      - command: hover-text
+        text: Continue
+        description: continue button below the password field
+        action: click
